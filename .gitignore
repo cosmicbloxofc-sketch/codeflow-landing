@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 .playwright-mcp/
-*.png
+!public/**/*.png
 
 # Project specific
 *.zip
