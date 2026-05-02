@@ -1,0 +1,42 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+.playwright-mcp/
+*.png
+
+# Project specific
+*.zip
+*.backup.jsx
+lpclaudinho-main/
+lpclaudinho-main (1)/
+.claude/
+conversas_export.md
+resumo_2026-05-01.md
+GUIA-PAPER-PARA-REACT.md
+REPORT-FRONTEND.md
+product-context.txt
+product-context-copy.txt
+fracutures-bekc.jsx
+react.jsx
+docs/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
