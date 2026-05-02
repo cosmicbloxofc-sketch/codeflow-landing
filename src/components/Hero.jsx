@@ -108,7 +108,7 @@ export default function Hero({ onViewPlans, onHowItWorks }) {
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
-        }}>Até 78% Mais Barato</span>
+        }}>849R$ Mais Barato</span>
       </h1>
 
       {/* Subtítulo */}
