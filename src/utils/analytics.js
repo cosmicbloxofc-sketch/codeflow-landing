@@ -29,6 +29,18 @@ export const trackMetaInitiateCheckout = ({ planId, planName, value, currency = 
   }
 };
 
+export const trackMetaViewContent = ({ planId, planName, value, currency = 'BRL' }) => {
+  if (window.fbq) {
+    window.fbq('track', 'ViewContent', {
+      content_ids: [planId],
+      content_name: planName,
+      content_type: 'product',
+      currency,
+      value,
+    });
+  }
+};
+
 export const trackCTAClick = (ctaLocation) => {
   trackEvent('cta_clicked', {
     location: ctaLocation,

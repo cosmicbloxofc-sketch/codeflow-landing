@@ -1,5 +1,6 @@
 import ShinyText from './ShinyText';
 import { useRef, useState, useEffect } from 'react';
+import { trackMetaInitiateCheckout, trackMetaViewContent } from '../utils/analytics';
 
 const PLANS = [
   {
@@ -452,7 +453,10 @@ function PlanCard({ plan, onPlanClick }) {
 
       <button
         type="button"
-        onClick={() => onPlanClick(id)}
+        onClick={() => {
+          trackMetaInitiateCheckout({ planId: id, planName: name, value: 249 });
+          onPlanClick(id);
+        }}
         onMouseEnter={(e) => {
           e.currentTarget.style.transform = 'scale(1.05)';
           e.currentTarget.style.boxShadow = '0 8px 32px rgba(46, 91, 255, 0.5)';
@@ -504,6 +508,7 @@ export default function Plans({ onPlanClick }) {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
+          trackMetaViewContent({ planId: 'MAX20X', planName: 'Plano MAX 20x', value: 249 });
         }
       },
       { threshold: 0.1 }
